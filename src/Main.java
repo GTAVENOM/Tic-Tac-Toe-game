@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Board b1 = new Board();
-        Player p1=new Player("X");
-        Player p2=new Player("O");
+        Player p1=new Player("X",Player.HUMAN);
+        Player p2=new Player("O",Player.HUMAN);
         b1.drawBoard();
         gameState(b1,p1,p2);
     }
@@ -32,7 +32,7 @@ public class Main {
         if(Rules.checkWin(b1)==1){
             System.out.println("X Wins!");
         }
-        else  if(Rules.checkWin(b1)==0){
+        else if(Rules.checkWin(b1)==0){
             System.out.println("O Wins!");
         }
     }
